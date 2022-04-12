@@ -1,0 +1,84 @@
+class Animal:
+	+ name str
+	+ weight int
+	+ habitat str
+	+ move()
+	
+class Fish (inherits Animal):
+	^ name
+	^ weight
+	^ habitat
+	+ vertebrate bool
+	^ move()
+	
+class Snake (inherits Animal):
+	^ name
+	^ weight
+	^ habitat
+	+ venomous bool
+	^ move()
+	+ bite()
+	
+class Person (inherits Animal):
+	^ name = "Human"
+	^ weight
+	^ habitat
+	+ race str
+	^ move()
+
+---
+
+class Book:
+	+ title str
+	+ author str
+	+ genre str
+	+ pages int
+	+ open()
+	
+class Textbook (inherits Book):
+	^ title
+	^ author
+	^ genre
+	^ pages
+	+ subject str
+	^ open()
+	
+class AddressBook (inherits Book):		#assuming this to be like a phone book
+	^ title
+	^ author
+	^ genre = "reference"
+	^ pages
+	+ region str
+	^ open()
+
+---
+
+class Vehicle:
+	+ make str
+	+ model str
+	+ drive()
+	
+class Car (inherits Vehicle):
+	^ make
+	^ model
+	+ mpg float
+	+ horsepower int
+	^ drive()
+	
+class Bicycle (inherits Vehicle):
+	^ make
+	^ model
+	+ style str
+	^ drive()
+	
+class Boat (inherits Vehicle):
+	^ make
+	^ model
+	+ boat_type str
+	^ drive()
+	
+class HotAirBalloon (inherits Vehicle):
+	^ make
+	^ model
+	+ balloon_pattern str
+	^ drive()
