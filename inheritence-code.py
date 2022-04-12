@@ -77,3 +77,42 @@ class AddressBook(Book):
         
     #getter and setter for region here
     
+class Vehicle:
+    def __init__(self,make,model):
+        self.__make = make
+        self.__model = model
+    
+    #getters/setters for make and model here
+    
+    def drive(self,speed,time):
+        #drive a given speed for a given time, straight forward
+        pass
+
+class Car(Vehicle):
+    def __init__(self,make,model,mpg,horsepower):
+        super().__init__(make,model)
+        self.__mpg = mpg
+        self.__horsepower = horsepower
+        
+    #getters and setters for mpg and horsepower here
+    
+class Bicycle(Vehicle):
+    def __init__(self,make,model,style):
+        super().__init__(make,model)
+        self.__style = style
+        
+    #getter and setter for style here
+
+class Boat(Vehicle):
+    def __init__(self,make,model,boat_type):
+        super().__init__(make,model)
+        self.__boat_type = boat_type
+        
+    #getter and setter for boat_type here
+    
+class HotAirBalloon(Vehicle):
+    def __init__(self,make,model,balloon_pattern):
+        super().__init__(make,model)
+        self.__balloon_pattern = balloon_pattern
+        
+    #getter and setter for balloon_pattern here
