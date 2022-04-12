@@ -50,4 +50,30 @@ class Person(Animal):
     #getter and setter for race here
 
 class Book:
+    def __init__(self,title,author,genre,pages):
+        self.__title = title
+        self.__author = author
+        self.__genre = genre
+        self.__pages = pages
+        
+    #getters and setters for attributes go here
+    
+    def book_open(self,page):
+        #open the book to a given page
+        pass
+        
+class Textbook(Book):
+    def __init__(self,title,author,genre,pages,subject):
+        super().__init__(title,author,genre,pages)
+        self.__subject = subject
+        
+    #getter and setter for subject here
+    
+class AddressBook(Book):
+    def __init__(self,title,author,genre,pages,region):
+        super().__init__(title,author,pages)
+        self.__genre = "reference"
+        self.__region = region
+        
+    #getter and setter for region here
     
